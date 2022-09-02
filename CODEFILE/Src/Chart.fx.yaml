@@ -15,13 +15,13 @@ Chart As screen:
 
     ComboBox1_1 As combobox:
         ChevronBackground: =RGBA(119, 58, 148, 1)
-        DisplayFields: =["DisplayName"]
+        DisplayFields: =["City"]
         Height: =49
         Items: |-
             =Office365Users.SearchUser({searchTerm:ComboBox1_1.SearchText,top:10})
-        SearchFields: =["DisplayName"]
+        SearchFields: =["City"]
         SearchItems: |-
-            =Search(Office365Users.SearchUser({searchTerm:ComboBox1_1.SearchText,top:10}),ComboBox1_1.SearchText,"DisplayName")
+            =Search(Office365Users.SearchUser({searchTerm:ComboBox1_1.SearchText,top:10}),ComboBox1_1.SearchText,"City")
         Width: =341
         X: =44
         Y: =103
