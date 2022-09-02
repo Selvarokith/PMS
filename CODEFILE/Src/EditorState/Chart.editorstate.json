@@ -1088,7 +1088,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Employee-Name_Column1",
-      "ParentIndex": 24,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1289,7 +1289,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HRI_Column1",
-      "ParentIndex": 22,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2767,7 +2767,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MarkSet-3_Column1",
-      "ParentIndex": 20,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2953,7 +2953,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PMS Quarter & Year_Column1",
-      "ParentIndex": 23,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3518,7 +3518,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Total_Column1",
-      "ParentIndex": 21,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
