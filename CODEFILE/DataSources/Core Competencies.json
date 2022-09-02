@@ -1,0 +1,48 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-08-01T16:34:19.8370000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{Attachments}": "Attachments",
+      "{Attachments}@odata.type": "{Attachments} ({Attachments}@odata.type)",
+      "{FilenameWithExtension}": "File name with extension",
+      "{FullPath}": "Full Path",
+      "{HasAttachments}": "Has attachments",
+      "{Identifier}": "Identifier",
+      "{IsFolder}": "IsFolder",
+      "{Link}": "Link to item",
+      "{ModerationComment}": "Comments associated with the content approval of this list item",
+      "{ModerationStatus}": "Content approval status",
+      "{Name}": "Name",
+      "{Path}": "Folder path",
+      "{Thumbnail}": "Thumbnail",
+      "{TriggerWindowEndToken}": "Trigger Window End Token",
+      "{TriggerWindowStartToken}": "Trigger Window Start Token",
+      "{VersionNumber}": "Version number",
+      "Author": "Created By",
+      "Author#Claims": "Created By Claims",
+      "ComplianceAssetId": "Compliance Asset Id",
+      "Created": "Created",
+      "Editor": "Modified By",
+      "Editor#Claims": "Modified By Claims",
+      "ID": "ID",
+      "LeadershipSkills": "Leadership Skills",
+      "Modified": "Modified",
+      "OKRFulfillment_x002f_Contributio": "OKR Fulfillment/ Contributions to Org, Dept",
+      "ProfessionalCommunicationskills1": "Professional Communication skills 1 (Email, IM, Phone Ettiques, OOF Autoresponse)",
+      "ProfessionalCommunicationskills2": "Professional Communication skills 2 (Language skills)",
+      "TechnicalSkills_x0028_Rolefulfil": "Technical Skills (Role fulfillment skills)",
+      "Title": "Connected to Work"
+    },
+    "DatasetName": "https://m365x38379422.sharepoint.com/sites/PMS",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Core Competencies",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

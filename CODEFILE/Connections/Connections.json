@@ -1,0 +1,82 @@
+{
+  "488bad4b-e1af-4c8a-af34-402df8d61251": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1591/1.0.1591.2961/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://m365x38379422.sharepoint.com/sites/PMS": {
+        "dataSources": {
+          "BL Core Values & Individual Development": {
+            "tableName": "943843e4-1fe0-4124-94fb-d1666f289d74"
+          },
+          "Core Competencies": {
+            "tableName": "d99102c7-0e58-4a1c-951a-858da0eb01c9"
+          },
+          "Org Behavior": {
+            "tableName": "3026310b-cce0-444a-ab82-bd1b001a9f2d"
+          },
+          "Report": {
+            "tableName": "b57387f6-2ce4-44d6-b2fe-8e0098f0f730"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Report",
+      "BL Core Values & Individual Development",
+      "Core Competencies",
+      "Org Behavior"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "488bad4b-e1af-4c8a-af34-402df8d61251"
+  },
+  "a62c6f55-6efe-49e4-94af-7f17dd39eadb": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1593/1.0.1593.2980/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "a62c6f55-6efe-49e4-94af-7f17dd39eadb"
+  },
+  "c38e32b3-b6b7-4219-883f-846d4a4135ec": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Groups",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1588/1.0.1588.2938/office365groups/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365groups",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Groups"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c38e32b3-b6b7-4219-883f-846d4a4135ec"
+  }
+}

@@ -1,0 +1,636 @@
+"'1. BL Core Values & Individual Development' As screen":
+    BackgroundImage: =
+    Fill: =RGBA(250, 250, 250, 1)
+    ImagePosition: =ImagePosition.Tile
+
+    Button6 As button:
+        Fill: =RGBA(119, 58, 148, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        HoverFill: =RGBA(244, 237, 245, 1)
+        OnSelect: |-
+            =If(
+                !IsBlank(DataCardValue13.Text) && !IsBlank(DataCardValue12.Text) && !IsBlank(DataCardValue19.Text) && !IsBlank(DataCardValue18.Text) && !IsBlank(DataCardValue17.Text) && !IsBlank(DataCardValue16.Text) && !IsBlank(DataCardValue15.Text) && !IsBlank(DataCardValue14.Text),
+                Navigate(
+                    '2. Core Competencies',
+                    ScreenTransition.Fade
+                ),
+                Notify("please fill all fields")
+            )
+        Text: ="Next"
+        Width: =477
+        X: =736
+        Y: =672
+        ZIndex: =3
+
+    "'BL Core Values Form' As form":
+        BorderColor: =RGBA(119, 58, 148, 1)
+        DataSource: ='BL Core Values & Individual Development'
+        Fill: =RGBA(244, 237, 245, 1)
+        Height: =525
+        Item: =Defaults('BL Core Values & Individual Development')
+        NumberOfColumns: =1
+        Width: =1287
+        X: =39
+        Y: =115
+        ZIndex: =7
+
+        "'User / Result focused (Begin with end in mind)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="User_x002f_Resultfocused_x0028_B"
+            Default: =ThisItem.'User / Result focused (Begin with end in mind)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"User_x002f_Resultfocused_x0028_B")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "User_x002f_Resultfocused_x0028_B")
+            Required: =false
+            Update: =DataCardValue13.Text
+            Width: =1287
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey13 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =86
+                Y: =17
+                ZIndex: =1
+
+            DataCardValue13 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Fill: =RGBA(252, 250, 252, 1)
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverBorderColor: =RGBA(119, 58, 148, 1)
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage13 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue13.Y + DataCardValue13.Height
+                ZIndex: =3
+
+            StarVisible13 As label:
+                Align: =Align.Center
+                Height: =DataCardKey13.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey13.Y
+                ZIndex: =4
+
+        "'Corporate Proactiveness (Be Proactive)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.'Corporate Proactiveness (Be Proactive)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue12.Text
+            Width: =1287
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey12 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =86
+                Y: =16
+                ZIndex: =1
+
+            DataCardValue12 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage12 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue12.Y + DataCardValue12.Height
+                ZIndex: =3
+
+        "'Self Care & Work-Life Balance (Sharpen the Saw)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="SelfCareWork_x002d_LifeBalance_x"
+            Default: =ThisItem.'Self Care & Work-Life Balance (Sharpen the Saw)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"SelfCareWork_x002d_LifeBalance_x")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "SelfCareWork_x002d_LifeBalance_x")
+            Required: =false
+            Update: =DataCardValue19.Text
+            Width: =1287
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey19 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =86
+                Y: =16
+                ZIndex: =1
+
+            DataCardValue19 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage19 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue19.Y + DataCardValue19.Height
+                ZIndex: =3
+
+            StarVisible19 As label:
+                Align: =Align.Center
+                Height: =DataCardKey19.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey19.Y
+                ZIndex: =4
+
+        "'Initiator & Team Player (Synergize)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="InitiatorTeamPlayer_x0028_Synerg"
+            Default: =ThisItem.'Initiator & Team Player (Synergize)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"InitiatorTeamPlayer_x0028_Synerg")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "InitiatorTeamPlayer_x0028_Synerg")
+            Required: =false
+            Update: =DataCardValue18.Text
+            Width: =1287
+            X: =0
+            Y: =3
+            ZIndex: =2
+
+            DataCardKey18 As label:
+                AutoHeight: =true
+                Color: =RGBA(109, 49, 162, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =86
+                Y: =17
+                ZIndex: =1
+
+            DataCardValue18 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage18 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue18.Y + DataCardValue18.Height
+                ZIndex: =3
+
+            StarVisible18 As label:
+                Align: =Align.Center
+                Height: =DataCardKey18.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey18.Y
+                ZIndex: =4
+
+        "'Empathic Listening (Seek First to Understand, Then To Be Understood)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="EmpathicListening_x0028_SeekFirs"
+            Default: =ThisItem.'Empathic Listening (Seek First to Understand, Then To Be Understood)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"EmpathicListening_x0028_SeekFirs")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "EmpathicListening_x0028_SeekFirs")
+            Required: =false
+            Update: =DataCardValue17.Text
+            Width: =1287
+            X: =0
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey17 As label:
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =86
+                Y: =11
+                ZIndex: =1
+
+            DataCardValue17 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage17 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue17.Y + DataCardValue17.Height
+                ZIndex: =3
+
+            StarVisible17 As label:
+                Align: =Align.Center
+                Height: =DataCardKey17.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey17.Y
+                ZIndex: =4
+
+        "'Innovation & Professionally Ahead (BWEIM, Seek First to Understand, Then to be Understood)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="InnovationProfessionallyAhead_x0"
+            Default: =ThisItem.'Innovation & Professionally Ahead (BWEIM, Seek First to Understand, Then to be Understood)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"InnovationProfessionallyAhead_x0")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "InnovationProfessionallyAhead_x0")
+            Required: =false
+            Update: =DataCardValue16.Text
+            Width: =1287
+            X: =0
+            Y: =5
+            ZIndex: =2
+
+            DataCardKey16 As label:
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =44
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =86
+                Y: =11
+                ZIndex: =1
+
+            DataCardValue16 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage16 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue16.Y + DataCardValue16.Height
+                ZIndex: =3
+
+            StarVisible16 As label:
+                Align: =Align.Center
+                Height: =DataCardKey16.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey16.Y
+                ZIndex: =4
+
+        "'Win-Win Approach (Think Win-Win - Courage & Consideration)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Win_x002d_WinApproach_x0028_Thin"
+            Default: =ThisItem.'Win-Win Approach (Think Win-Win - Courage & Consideration)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"Win_x002d_WinApproach_x0028_Thin")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "Win_x002d_WinApproach_x0028_Thin")
+            Required: =false
+            Update: =DataCardValue15.Text
+            Width: =1287
+            X: =0
+            Y: =6
+            ZIndex: =2
+
+            DataCardKey15 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =86
+                Y: =10 + (DataCardValue15.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue15 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage15 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue15.Y + DataCardValue15.Height
+                ZIndex: =3
+
+            StarVisible15 As label:
+                Align: =Align.Center
+                Height: =DataCardKey15.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey15.Y
+                ZIndex: =4
+
+        "'Priority Management, Commitment to Deliver (Put first things first)_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="PriorityManagement_x002c_Commitm"
+            Default: =ThisItem.'Priority Management, Commitment to Deliver (Put first things first)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'BL Core Values & Individual Development'],DataSourceInfo.DisplayName,"PriorityManagement_x002c_Commitm")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =65
+            MaxLength: =DataSourceInfo([@'BL Core Values & Individual Development'], DataSourceInfo.MaxLength, "PriorityManagement_x002c_Commitm")
+            Required: =false
+            Update: =DataCardValue14.Text
+            Width: =1287
+            X: =0
+            Y: =7
+            ZIndex: =2
+
+            DataCardKey14 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =31
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =86
+                Y: =10 + (DataCardValue14.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue14 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                HoverFill: =RGBA(245, 228, 247, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =698
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage14 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue14.Y + DataCardValue14.Height
+                ZIndex: =3
+
+            StarVisible14 As label:
+                Align: =Align.Center
+                Height: =DataCardKey14.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey14.Y
+                ZIndex: =4
+
+    Label1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(119, 58, 148, 1)
+        BorderThickness: =2
+        Color: =RGBA(119, 58, 148, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =52
+        Size: =18
+        Text: =" BL Core Values & Individual Development"
+        Width: =544
+        X: =411
+        Y: =32
+        ZIndex: =9
+

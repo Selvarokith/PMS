@@ -1,0 +1,427 @@
+Chart As screen:
+
+    LineChart2 As lineChart:
+        Font: =Font.'Open Sans'
+        Height: =471
+        Items: =Search(Report,ComboBox1_1.Selected.DisplayName,"Employee_x002d_Name")
+        NumberOfSeries: =0
+        Width: =782
+        X: =584
+        XLabelAngle: =40
+        Y: =67
+        YAxisMax: =10
+        YAxisMin: =0
+        ZIndex: =3
+
+    ComboBox1_1 As combobox:
+        ChevronBackground: =RGBA(119, 58, 148, 1)
+        DisplayFields: =["DisplayName"]
+        Height: =49
+        Items: |-
+            =Office365Users.SearchUser({searchTerm:ComboBox1_1.SearchText,top:10})
+        SearchFields: =["DisplayName"]
+        SearchItems: |-
+            =Search(Office365Users.SearchUser({searchTerm:ComboBox1_1.SearchText,top:10}),ComboBox1_1.SearchText,"DisplayName")
+        Width: =341
+        X: =44
+        Y: =103
+        ZIndex: =4
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =192
+        Items: =Search(Report,ComboBox1_1.Selected.DisplayName,"Employee_x002d_Name")
+        Width: =1366
+        X: =0
+        Y: =548
+        ZIndex: =5
+
+        "'Corporate Proactiveness (Be Proactive)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Corporate Proactiveness (Be Proactive)"
+            FieldName: ="CorporateProactiveness_x0028_BeP"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.'Corporate Proactiveness (Be Proactive)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        "'User / Result focused (Begin with end in mind)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="User / Result focused (Begin with end in mind)"
+            FieldName: ="User_x002f_Resultfocused_x0028_B"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.'User / Result focused (Begin with end in mind)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        "'Priority Management, Commitment to Deliver (Put first things first)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Priority Management, Commitment to Deliver (Put first things first)"
+            FieldName: ="PriorityManagement_x002c_Commitm"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.'Priority Management, Commitment to Deliver (Put first things first)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        "'Win-Win Approach (Think Win-Win - Courage & Consideration)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Win-Win Approach (Think Win-Win - Courage & Consideration)"
+            FieldName: ="Win_x002d_WinApproach_x0028_Thin"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.'Win-Win Approach (Think Win-Win - Courage & Consideration)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        "'Innovation & Professionally Ahead (BWEIM, Seek First to Understand, Then to be Understood)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Innovation & Professionally Ahead (BWEIM, Seek First to Understand, Then to be Understood)"
+            FieldName: ="InnovationProfessionallyAhead_x0"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.'Innovation & Professionally Ahead (BWEIM, Seek First to Understand, Then to be Understood)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        "'Empathic Listening (Seek First to Understand, Then To Be Understood)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Empathic Listening (Seek First to Understand, Then To Be Understood)"
+            FieldName: ="EmpathicListening_x0028_SeekFirs"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.'Empathic Listening (Seek First to Understand, Then To Be Understood)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        "'Initiator & Team Player (Synergize)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Initiator & Team Player (Synergize)"
+            FieldName: ="InitiatorTeamPlayer_x0028_Synerg"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.'Initiator & Team Player (Synergize)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        "'Self Care & Work-Life Balance (Sharpen the Saw)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Self Care & Work-Life Balance (Sharpen the Saw)"
+            FieldName: ="SelfCareWork_x002d_LifeBalance_x"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =9
+            Text: =ThisItem.'Self Care & Work-Life Balance (Sharpen the Saw)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
+
+        "'Connected to Work_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Connected to Work"
+            FieldName: ="ConnectedtoWork"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =10
+            Text: =ThisItem.'Connected to Work'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =10
+
+        "'Professional Communication skills 1 (Email, IM, Phone Ettiques, OOF Autoresponse)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Professional Communication skills 1 (Email, IM, Phone Ettiques, OOF Autoresponse)"
+            FieldName: ="ProfessionalCommunicationskills1"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =11
+            Text: =ThisItem.'Professional Communication skills 1 (Email, IM, Phone Ettiques, OOF Autoresponse)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =11
+
+        "'Professional Communication skills 2 (Language skills)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Professional Communication skills 2 (Language skills)"
+            FieldName: ="ProfessionalCommunicationskills2"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =12
+            Text: =ThisItem.'Professional Communication skills 2 (Language skills)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =12
+
+        "'Technical Skills (Role fulfillment skills)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Technical Skills (Role fulfillment skills)"
+            FieldName: ="TechnicalSkills_x0028_Rolefulfil"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =13
+            Text: =ThisItem.'Technical Skills (Role fulfillment skills)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =13
+
+        "'OKR Fulfillment/ Contributions to Org, Dept_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="OKR Fulfillment/ Contributions to Org, Dept"
+            FieldName: ="OKRFulfillment_x002f_Contributio"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =14
+            Text: =ThisItem.'OKR Fulfillment/ Contributions to Org, Dept'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =14
+
+        "'Leadership Skills_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Leadership Skills"
+            FieldName: ="LeadershipSkills"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =15
+            Text: =ThisItem.'Leadership Skills'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =15
+
+        "'Attendance & Leave Management (Apply, Communicate, Autoresponse)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Attendance & Leave Management (Apply, Communicate, Autoresponse)"
+            FieldName: ="AttendanceLeaveManagement_x0028_"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =16
+            Text: =ThisItem.'Attendance & Leave Management (Apply, Communicate, Autoresponse)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =16
+
+        "'Dresscode Ettiques & Presentable_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Dresscode Ettiques & Presentable"
+            FieldName: ="DresscodeEttiquesPresentable"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =17
+            Text: =ThisItem.'Dresscode Ettiques & Presentable'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =17
+
+        "'Information Protection (NDA, Non-Compete, IP Protection) (1, 4 or 10)_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Information Protection (NDA, Non-Compete, IP Protection) (1, 4 or 10)"
+            FieldName: ="InformationProtection_x0028_NDA_"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =18
+            Text: =ThisItem.'Information Protection (NDA, Non-Compete, IP Protection) (1, 4 or 10)'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =18
+
+        "'Following Org Policy Protocols_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Following Org Policy Protocols"
+            FieldName: ="FollowingOrgPolicyProtocols"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =19
+            Text: =ThisItem.'Following Org Policy Protocols'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =19
+
+        "'Markset-1_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Markset-1"
+            FieldName: ="Markset_x002d_1"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =20
+            Text: |-
+                =
+                
+                
+                Text(Value(ThisItem.'Markset-1'),"[$-en-US]#.00")
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =20
+
+        "'MarkSet-2_Column1' As dataTableColumn.textualColumn":
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="MarkSet-2"
+            FieldName: ="MarkSet_x002d_2"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =21
+            Text: |-
+                =
+                
+                Text(Value(ThisItem.'MarkSet-2'),"[$-en-US]#.00")
+            Width: =106
+            X: =0
+            Y: =0
+            ZIndex: =21
+
+        "'MarkSet-3_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="MarkSet-3"
+            FieldName: ="MarkSet_x002d_3"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =22
+            Text: |-
+                =
+                Text(Value(ThisItem.'MarkSet-3'),"[$-en-US]#.00")
+            Width: =100
+            X: =1206
+            Y: =0
+            ZIndex: =22
+
+        Total_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Total"
+            FieldName: ="Total"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =23
+            Text: |-
+                =
+                
+                
+                Text(Value(ThisItem.Total),"[$-en-US]#.00")
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =23
+
+        HRI_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =true
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="HRI"
+            FieldName: ="HRI"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =24
+            Text: |-
+                =
+                
+                Text(Value(ThisItem.HRI),"[$-en-US]#.00")
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =24
+
+        "'PMS Quarter & Year_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="PMS Quarter & Year"
+            FieldName: ="PMSQuarterYear"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =25
+            Text: =ThisItem.'PMS Quarter & Year'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =25
+
+        "'Employee-Name_Column1' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Employee-Name"
+            FieldName: ="Employee_x002d_Name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =26
+            Text: =ThisItem.'Employee-Name'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =26
+
+    Label2 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        Size: =15
+        Text: ="Search By Employee"
+        Width: =291
+        X: =44
+        Y: =46
+        ZIndex: =6
+
+    Label3 As label:
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="Performance Chart "
+        Width: =201
+        X: =963
+        Y: =27
+        ZIndex: =7
+

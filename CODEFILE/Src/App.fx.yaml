@@ -1,0 +1,7 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(UserPermission,Office365Users.MyProfile().Mail in Office365Groups.ListGroupMembers("a4f4637a-34ed-4622-8fba-6e8dd570bc02").value.mail);
+        Set(varUserEmail, User().Email);
+    StartScreen: =Screen2
+

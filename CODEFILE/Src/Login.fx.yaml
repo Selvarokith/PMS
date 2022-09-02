@@ -1,0 +1,115 @@
+Login As screen:
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Rectangle3 As rectangle:
+        Fill: =RGBA(119, 58, 148, 1)
+        Height: =768
+        Width: =566
+        X: =800
+        ZIndex: =3
+
+    Image1 As image:
+        Height: =546
+        Image: ='19197089-removebg-preview (1)'
+        Width: =655
+        X: =78
+        Y: =203
+        ZIndex: =4
+
+    Label9 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(119, 58, 148, 1)
+        Color: =RGBA(119, 58, 148, 1)
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =61
+        Size: =25
+        Text: ="Performance Management System"
+        Width: =646
+        X: =87
+        Y: =82
+        ZIndex: =5
+
+    Rectangle2 As rectangle:
+        Fill: =RGBA(244, 237, 245, 0.66)
+        Height: =437
+        Width: =444
+        X: =864
+        Y: =203
+        ZIndex: =6
+
+    Button2 As button:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =0
+        Fill: =RGBA(119, 58, 148, 1)
+        FontWeight: =FontWeight.Bold
+        OnSelect: |-
+            =If(!IsBlank(ComboBox1.Selected.DisplayName) && !IsBlank(TextInput5.Text),
+            
+            Navigate('1. BL Core Values & Individual Development', ScreenTransition.Fade),Notify("please fill all fields"))
+        Text: ="Continue"
+        X: =999
+        Y: =553
+        ZIndex: =7
+
+    TextInput5 As text:
+        BorderColor: =RGBA(119, 58, 148, 1)
+        BorderThickness: =0
+        Default: =""
+        Height: =49
+        HintText: ="Quarerly Format ( Jan-Mar 2022 )"
+        Width: =341
+        X: =916
+        Y: =464
+        ZIndex: =8
+
+    Label7 As label:
+        Align: =Align.Center
+        Color: =RGBA(119, 58, 148, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Size: =20
+        Text: ="Start Here"
+        Width: =193
+        X: =976
+        Y: =248
+        ZIndex: =9
+
+    Label10 As label:
+        Color: =RGBA(252, 252, 252, 1)
+        Fill: =RGBA(119, 58, 148, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =57
+        Size: =20
+        Text: ="Welcome Back !"
+        Width: =225
+        X: =859
+        Y: =82
+        ZIndex: =10
+
+    Label11 As label:
+        Align: =Align.Center
+        Height: =80
+        Text: |-
+            ="Fill the Employee Name and Quaterly to 
+            start the  performance Analysis ."
+        Width: =341
+        X: =916
+        Y: =298
+        ZIndex: =11
+
+    ComboBox1 As combobox:
+        ChevronBackground: =RGBA(119, 58, 148, 1)
+        DisplayFields: =["DisplayName","Mail"]
+        Height: =55
+        Items: |-
+            =Office365Users.SearchUser({searchTerm:ComboBox1.SearchText,top:10})
+        SearchFields: =["DisplayName"]
+        SearchItems: |-
+            =Search(Office365Users.SearchUser({searchTerm:ComboBox1.SearchText,top:10}),ComboBox1.SearchText,"DisplayName")
+        Template: =ListItemTemplate.Person
+        Width: =418
+        X: =879
+        Y: =378
+        ZIndex: =12
+

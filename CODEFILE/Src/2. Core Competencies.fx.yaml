@@ -1,0 +1,473 @@
+"'2. Core Competencies' As screen":
+
+    Form3 As form:
+        DataSource: ='Core Competencies'
+        Fill: =RGBA(244, 237, 245, 1)
+        Height: =391
+        Item: =Defaults('Core Competencies')
+        NumberOfColumns: =1
+        Width: =1287
+        X: =40
+        Y: =129
+        ZIndex: =1
+
+        "'Connected to Work_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.'Connected to Work'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Core Competencies'],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Core Competencies'], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue21.Text
+            Width: =1239
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey21 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =30
+                Y: =10 + (DataCardValue21.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue21 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =688
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage21 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue21.Y + DataCardValue21.Height
+                ZIndex: =3
+
+        "'Professional Communication skills 1 (Email, IM, Phone Ettiques, OOF Autoresponse)_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ProfessionalCommunicationskills1"
+            Default: =ThisItem.'Professional Communication skills 1 (Email, IM, Phone Ettiques, OOF Autoresponse)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Core Competencies'],DataSourceInfo.DisplayName,"ProfessionalCommunicationskills1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Core Competencies'], DataSourceInfo.MaxLength, "ProfessionalCommunicationskills1")
+            Required: =false
+            Update: =DataCardValue22.Text
+            Width: =1239
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey22 As label:
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =658
+                X: =30
+                Y: =10 + (DataCardValue22.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue22 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =688
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage22 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue22.Y + DataCardValue22.Height
+                ZIndex: =3
+
+            StarVisible22 As label:
+                Align: =Align.Center
+                Height: =DataCardKey22.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey22.Y
+                ZIndex: =4
+
+        "'Professional Communication skills 2 (Language skills)_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ProfessionalCommunicationskills2"
+            Default: =ThisItem.'Professional Communication skills 2 (Language skills)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Core Competencies'],DataSourceInfo.DisplayName,"ProfessionalCommunicationskills2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Core Competencies'], DataSourceInfo.MaxLength, "ProfessionalCommunicationskills2")
+            Required: =false
+            Update: =DataCardValue23.Text
+            Width: =1239
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey23 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =30
+                Y: =10 + (DataCardValue23.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue23 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =688
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage23 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue23.Y + DataCardValue23.Height
+                ZIndex: =3
+
+            StarVisible23 As label:
+                Align: =Align.Center
+                Height: =DataCardKey23.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey23.Y
+                ZIndex: =4
+
+        "'Technical Skills (Role fulfillment skills)_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TechnicalSkills_x0028_Rolefulfil"
+            Default: =ThisItem.'Technical Skills (Role fulfillment skills)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Core Competencies'],DataSourceInfo.DisplayName,"TechnicalSkills_x0028_Rolefulfil")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Core Competencies'], DataSourceInfo.MaxLength, "TechnicalSkills_x0028_Rolefulfil")
+            Required: =false
+            Update: =DataCardValue24.Text
+            Width: =1239
+            X: =0
+            Y: =3
+            ZIndex: =2
+
+            DataCardKey24 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =30
+                Y: =10 + (DataCardValue24.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue24 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =688
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage24 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue24.Y + DataCardValue24.Height
+                ZIndex: =3
+
+            StarVisible24 As label:
+                Align: =Align.Center
+                Height: =DataCardKey24.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey24.Y
+                ZIndex: =4
+
+        "'OKR Fulfillment/ Contributions to Org, Dept_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OKRFulfillment_x002f_Contributio"
+            Default: =ThisItem.'OKR Fulfillment/ Contributions to Org, Dept'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Core Competencies'],DataSourceInfo.DisplayName,"OKRFulfillment_x002f_Contributio")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Core Competencies'], DataSourceInfo.MaxLength, "OKRFulfillment_x002f_Contributio")
+            Required: =false
+            Update: =DataCardValue25.Text
+            Width: =1239
+            X: =0
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey25 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =30
+                Y: =10 + (DataCardValue25.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue25 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =688
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage25 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue25.Y + DataCardValue25.Height
+                ZIndex: =3
+
+            StarVisible25 As label:
+                Align: =Align.Center
+                Height: =DataCardKey25.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey25.Y
+                ZIndex: =4
+
+        "'Leadership Skills_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="LeadershipSkills"
+            Default: =ThisItem.'Leadership Skills'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Core Competencies'],DataSourceInfo.DisplayName,"LeadershipSkills")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Core Competencies'], DataSourceInfo.MaxLength, "LeadershipSkills")
+            Required: =false
+            Update: =DataCardValue26.Text
+            Width: =1239
+            X: =0
+            Y: =5
+            ZIndex: =2
+
+            DataCardKey26 As label:
+                AutoHeight: =true
+                Color: =RGBA(119, 58, 148, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                X: =30
+                Y: =10 + (DataCardValue26.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue26 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(119, 58, 148, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =45
+                HintText: ="Select Value between (1-10)"
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Tooltip: =Parent.DisplayName
+                Width: =477
+                X: =688
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage26 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue26.Y + DataCardValue26.Height
+                ZIndex: =3
+
+            StarVisible26 As label:
+                Align: =Align.Center
+                Height: =DataCardKey26.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey26.Y
+                ZIndex: =4
+
+    Button7 As button:
+        Fill: =RGBA(119, 58, 148, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        OnSelect: |-
+            =
+            
+            If(
+                !IsBlank(DataCardValue21.Text) && !IsBlank(DataCardValue22.Text) && !IsBlank(DataCardValue23.Text) && !IsBlank(DataCardValue24.Text) && !IsBlank(DataCardValue25.Text) && !IsBlank(DataCardValue26.Text),
+                Navigate('3. Org Behavior', ScreenTransition.Fade),
+                Notify("please fill all fields")
+            )
+        Text: ="Next"
+        Width: =480
+        X: =724
+        Y: =529
+        ZIndex: =2
+
+    Label1_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(119, 58, 148, 1)
+        BorderThickness: =2
+        Color: =RGBA(119, 58, 148, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =52
+        Size: =18
+        Text: =" Core Competencies"
+        Width: =544
+        X: =40
+        Y: =66
+        ZIndex: =3
+
